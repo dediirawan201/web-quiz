@@ -14,10 +14,10 @@ function App() {
     {id:7, amount: "Rp 8000"},
     {id:8, amount: "Rp 16000"},
     {id:9, amount: "Rp 32000"},
-    {id:10, amount: "Rp 50000"},
-    {id:11, amount: "Rp 100000"},
-    {id:12, amount: "Rp 125000"},
-    {id:13, amount: "Rp 250000"},
+    {id:10, amount:"Rp 50000"},
+    {id:11, amount:"Rp 100000"},
+    {id:12, amount:"Rp 125000"},
+    {id:13, amount:"Rp 250000"},
   ].reverse();
   return (
     <div className="app">
