@@ -3,8 +3,10 @@ import { useEffect, useMemo, useState } from 'react';
 import './app.css';
 import Timer from './components/Timer';
 import Trivia from './components/Trivia';
+import Start from './components/Start';
 
 function App() {
+  const [userName, setUserName] = useState(null);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [stop, setStop] = useState(false); 
   const [earned, setEarned] = useState("Rp 0")
@@ -102,7 +104,9 @@ function App() {
   }, [moneyPyramid,questionNumber])
   return (
     <div className="app">
-      <div className="main">
+      {userName ? (
+        <>
+         <div className="main">
         {stop ? (
           <h1 className="end-text">You erned: {earned}</h1>
         ): (
@@ -134,6 +138,9 @@ function App() {
 
         </ul>
       </div>
+        </>
+      ) : <Start setUserName={setUserName}/>}
+     
       
     </div>
   );
